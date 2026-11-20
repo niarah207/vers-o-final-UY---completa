@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="tema-escuro">
+<head>
+    <meta charset="UTF-8">
+    <script>document.documentElement.classList.add('tema-escuro');try{if(localStorage.getItem('uy-tema')==='claro'){document.documentElement.classList.remove('tema-escuro');}}catch(e){}</script>
+    <script>document.documentElement.classList.add('js-reveal');setTimeout(function(){if(!window.__uyReveal){document.documentElement.classList.remove('js-reveal');}},1200);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Updated Yesterday — Gestão de Manutenção</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Imagens/logotipo.png">
+    <noscript>
+        <style>.revelar, .revelar-esquerda, .revelar-direita, .revelar-cima, .revelar-cascata > * { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="#" class="conteiner-logo">
+            <img src="Imagens/logotipo.png" alt="Logo Updated Yesterday" class="imagem-logo">
+            <div class="textos-logo">
+                <span class="titulo-logo">UPDATED YESTERDAY</span>
+            </div>
+        </a>
+
+        <nav class="navegacao">
+            <ul class="lista-menu">
+                <li><a href="#sobre-nos" class="link-menu">Sobre Nós</a></li>
+                <li><a href="#objetivo" class="link-menu">Objetivo</a></li>
+                <li><a href="#funcionalidades" class="link-menu">Funcionalidades</a></li>
+                <li><a href="#rodape" class="link-menu">Contato</a></li>
+             
+
+            </ul>
+        </nav>
+
+        <div class="conteiner-botao">
+            <a href="solicitar-orçamento.html" class="botao-acao">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Solicitar teste grátis
+            </a>
+        </div>
+
+
+        <button class="btn-tema" id="btn-tema" type="button" aria-label="Ativar modo claro" aria-pressed="true">
+            <svg class="icone-sol" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="12" y1="2" x2="12" y2="4"></line>
+                <line x1="12" y1="20" x2="12" y2="22"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="2" y1="12" x2="4" y2="12"></line>
+                <line x1="20" y1="12" x2="22" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icone-lua" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+
+        <button class="btn-hamburguer" id="btn-hamburguer" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+            <span class="linha-hamburguer"></span>
+            <span class="linha-hamburguer"></span>
+            <span class="linha-hamburguer"></span>
+        </button>
+    </header>
+
+    <!-- MENU MOBILE (HAMBÚRGUER) -->
+    <div class="overlay-menu-mobile" id="overlay-menu-mobile"></div>
+    <nav class="menu-mobile" id="menu-mobile" aria-hidden="true">
+        <ul class="lista-menu-mobile">
+            <li><a href="#sobre-nos" class="link-menu-mobile">Sobre Nós</a></li>
+            <li><a href="#objetivo" class="link-menu-mobile">Objetivo</a></li>
+            <li><a href="#funcionalidades" class="link-menu-mobile">Funcionalidades</a></li>
+            <li><a href="#rodape" class="link-menu-mobile">Contato</a></li>
+        </ul>
+        <a href="solicitar-orçamento.html" class="botao-acao botao-acao-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            Solicitar teste grátis
+        </a>
+    </nav>
+
+    <main id="conteudo-principal">
+
+        <!-- SEÇÃO HERO -->
+        <section id="hero" class="hero">
+            <div class="conteudo-hero revelar-esquerda">
+                <h2>Não dependemos de sorte.<br>Planejamento é o que nos move</h2>
+                <div class="linha-dourada"></div>
+                <p class="descricao-hero">
+                    Plataforma SaaS que integra operação, logística e PCM, conectando chamados, janelas de disponibilidade, agenda e ordens de serviço em um único fluxo. Centraliza dados em tempo real para reduzir atrasos, retrabalho e conflitos entre operação e manutenção, tornando a gestão mais ágil e eficiente. 
+                </p>
+                <a href="solicitar-orçamento.html" class="botao-principal">
+                    Conhecer a UY
+                    <span class="seta">→</span>
+                </a>
+            </div>
+
+            <div class="visual-hero revelar-direita">
+                <div class="moldura-hero">
+                    <img src="Imagens/celularepc.png" alt="Plataforma Updated Yesterday" class="imagem-hero">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE NÓS -->
+        <section class="sobre-nos" id="sobre-nos">
+        <div class="sobre-nos-container">
+            
+            <div class="sobre-nos-ilustracao revelar-esquerda">
+            <div class="moldura-imagem">
+                <img src="Imagens/mr-haley-frontal.png" alt="Ilustração Robô Updated Yesterday" class="imagem-destaque">
+            </div>
+            </div>
+
+            <div class="sobre-nos-conteudo revelar-direita">
+            <div class="tag-secao">
+                
+                <span class="texto-tag">SOBRE NÓS</span>
+            </div>
+
+            <h2 class="titulo-secao">
+                Tecnologia que entende <br>
+                <span class="texto-dourado">sua operação.</span>
+            </h2>
+
+            <p class="texto-destaque">
+                A Updated Yesterday nasceu para transformar <strong>manutenção em inteligência</strong>.
+            </p>
+
+            <p class="texto-descricao">
+                Desenvolvemos uma plataforma completa para planejamento, execução e acompanhamento de atividades técnicas com alta eficiência.
+            </p>
+
+            <p class="texto-descricao">
+                Unimos simplicidade visual e poder tecnológico para entregar resultados consistentes ao seu negócio.
+            </p>
+
+            <div class="cards-grid revelar-cascata">
+                
+                <div class="card-info">
+                <div class="card-cabecalho">
+                    <div class="card-icone"> <img src="Icones/icones-escuros/olho.png"></div>
+                    <h3 class="card-titulo">Propósito e Visão</h3>
+                </div>
+                <p class="card-texto">
+                    Simplificar a manutenção e impulsionar resultados com tecnologia inteligente.
+                </p>
+                </div>
+
+                <div class="card-info">
+                <div class="card-cabecalho">
+                    <div class="card-icone"><img src="Icones/icones-escuros/duaspessoass.png"></div>
+                    <h3 class="card-titulo">Nossa Missão</h3>
+                </div>
+                <div class="card-linha"></div>
+                <p class="card-texto">
+                    Oferecer uma plataforma acessível que centraliza e otimiza a gestão diária das manutenções.
+                </p>
+                </div>
+
+                <div class="card-info">
+                <div class="card-cabecalho">
+                    <div class="card-icone"><img src="Icones/icones-escuros/estrela.png"></div>
+                    <h3 class="card-titulo">Nossos Valores</h3>
+                </div>
+                <div class="card-linha"></div>
+                <ul class="card-lista">
+                    <li>Foco no Cliente</li>
+                    <li>Inovação Contínua</li>
+                    <li>Transparência</li>
+                    <li>Excelência Operacional</li>
+                </ul>
+                </div>
+
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+        <!-- SEÇÃO NOSSO OBJETIVO -->
+        <section id="objetivo" class="secao-padrao nosso-objetivo">
+            <div class="container-objetivo-topo">
+                <div class="conteudo-objetivo">
+                    <div class="tagline">
+                        <span class="icone-tagline"><img src="Imagens/logotipo.png" alt="Icone"></span>
+                        NOSSO OBJETIVO
+                    </div>
+                    <h2>Transformar manutenção em eficiência e controle.</h2>
+                    <div class="linha-dourada"></div>
+                    <div class="texto-secao">
+                        <p>Acreditamos que uma gestão bem executada não apenas resolve falhas, mas previne problemas, reduz custos operacionais e impulsiona o crescimento.</p>
+                        <p><strong>Organizar hoje para crescer amanhã.</strong></p>
+                    </div>
+                </div>
+
+                <div class="grade-cards-objetivo revelar-cascata">
+                    <article class="card-padrao card-vertical">
+                        <div class="icone-card">
+                            <img src="Icones/icones-escuros/lista.png" alt="Controle">
+                        </div>
+                        <div class="conteudo-card">
+                            <h3>Controle</h3>
+                            <p>Informações centralizadas para decisões rápidas e assertivas.</p>
+                        </div>
+                    </article>
+
+                    <article class="card-padrao card-vertical">
+                        <div class="icone-card">
+                            <img src="Icones/icones-escuros/grafico.png" alt="Crescimento">
+                        </div>
+                        <div class="conteudo-card">
+                            <h3>Crescimento</h3>
+                            <p>Dados acionáveis que impulsionam melhoria contínua.</p>
+                        </div>
+                    </article>
+
+                    <article class="card-padrao card-vertical">
+                        <div class="icone-card">
+                            <img src="Icones/icones-escuros/escudo.png" alt="Confiança">
+                        </div>
+                        <div class="conteudo-card">
+                            <h3>Confiança</h3>
+                            <p>Transparência total e estabilidade para sua equipe técnica.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- FAIXA INFERIOR -->
+            <div class="faixa-destaque-bottom">
+                <span class="badge-faixa">GANHOS</span>
+                <div class="grade-faixa">
+                    <div class="item-faixa">
+                        <div class="icone-card icone-pequeno">
+                            <img src="Icones/icones-escuros/grafico-de-perdas.png" alt="">
+                        </div>
+                        <div class="conteudo-card">
+                            <h3>Redução de Retrabalho</h3>
+                            <p>Menos tempo preenchendo planilhas paralelas e formulários, mais tempo para planejamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-faixa">
+                        <div class="icone-card icone-pequeno">
+                            <img src="Icones/icones-escuros/relogio.png" alt="">
+                        </div>
+                        <div class="conteudo-card">
+                            <h3>Redução de 30% no Lead time</h3>
+                            <p>Centralize chamados, agendas e informações para tornar a manutenção mais rápida e eficiente.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-faixa">
+                        <div class="icone-card icone-pequeno">
+                            <img src="Icones/icones-escuros/dolar.png" alt="">
+                        </div>
+                        <div class="conteudo-card">
+                            <h3>Redução de custos</h3>
+                            <p>Menos gastos com paradas de produção por indisponibilidade de máquina.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-faixa">
+                        <div class="icone-card icone-pequeno">
+                            <img src="Icones/icones-escuros/configuracao.png" alt="">
+                        </div>
+                        <div class="conteudo-card">
+                            <h3>Aumento da disponibilidade mecânica</h3>
+                            <p>Antecipe falhas, organize a manutenção e mantenha seus equipamentos disponíveis por mais tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <!-- SEÇÃO FUNCIONALIDADES / DIFERENCIAL -->
+        <section id="funcionalidades" class="secao-padrao funcionalidades">
+            <div class="container-funcionalidades">
+
+                <div class="secao-header revelar-cima">
+                    <div class="tagline">FUNCIONALIDADES E DIFERENCIAIS</div>
+                    <h2>Tudo o que sua manutenção precisa.<br>Do operacional à estratégia.</h2>
+                    <div class="linha-dourada"></div>
+                </div>
+
+                <!-- Uma funcionalidade por linha, alternando o lado do texto e da ilustração -->
+                <div class="fn-lista">
+                <article class="fn-linha" id="fn-preventiva">
+                <div class="fn-texto fx-texto revelar-esquerda">
+                                            <span class="fx-eyebrow"><i></i>Funcionalidade 01 (pode ser assim?)</span>
+                                            <div class="fn-titulo"><h3>Preventiva</h3></div>
+                                            <div class="fx-traco"></div>
+                                            <p>Não sei como você quer que o texto seja feito, por enquanto, é apenas um exemplo</p>
+                                            <div class="fx-destaque"><span class="fx-ico fx-ico--sm"><img src="Icones/icones-escuros/preventivo.png" alt=""></span><div><strong>Exemploooo, frase que 'define' essa funcionalidade</strong><span>Vou discutir com vocês final de semana, o que acha?</span></div></div>
+                                        </div>
+                <div class="fn-visual revelar-direita">
+                <div class="fn-fundo"></div>
+                <!-- QUADRO DA IMAGEM: coloque o arquivo (png, jpg ou webp) em Imagens/funcionalidades/preventiva.png -->
+                <div class="fn-painel fn-atras fn-painel-img">
+<img class="fn-foto" src="Imagens/mrharley.png" alt="Tela de Preventiva da plataforma" onerror="var e=['jpg','jpeg','webp'],i=+(this.dataset.i||0);if(i<e.length){this.dataset.i=i+1;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else{this.remove()}">
+                </div>
+                <!-- QUADRO DO TEXTO: edite o conteúdo abaixo -->
+                <div class="fn-painel fn-frente fn-painel-txt">
+                <h4>Plano automatizado</h4>
+                <ul><li>Personalizável para cada operação</li><li>Manutenção antes da falha</li></ul>
+                </div>
+                </div>
+                </article>
+            <article class="fn-linha" id="fn-chamados">
+                <div class="fn-texto fx-texto revelar-direita">
+                                            <span class="fx-eyebrow"><i></i>Funcionalidade 02</span>
+                    <div class="fn-titulo"><h3>Chamados</h3><span class="badge badge-escuro">DIFERENCIAL</span></div>
+                                                <div class="fx-traco"></div>
+                                                <p>Transforme falhas em ordens de serviço com poucos cliques, sem retrabalho entre operação e manutenção.</p>
+                                                <div class="fx-destaque"><span class="fx-ico fx-ico--sm"><img src="Icones/icones-escuros/falando.png" alt=""></span><div><strong>Da falha à OS em poucos cliques</strong><span>Abra, acompanhe e converta chamados com agilidade.</span></div></div>
+                                            </div>
+                    <div class="fn-visual revelar-esquerda">
+                    <div class="fn-fundo"></div>
+                    <!-- QUADRO DA IMAGEM: coloque o arquivo (png, jpg ou webp) em Imagens/funcionalidades/chamados.png -->
+                    <div class="fn-painel fn-atras fn-painel-img">
+<img class="fn-foto" src="Imagens/funcionalidades/chamados.png" alt="Tela de Chamados da plataforma" onerror="var e=['jpg','jpeg','webp'],i=+(this.dataset.i||0);if(i<e.length){this.dataset.i=i+1;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else{this.remove()}">
+                    </div>
+                    <!-- QUADRO DO TEXTO: edite o conteúdo abaixo -->
+                    <div class="fn-painel fn-frente fn-painel-txt">
+                    <h4>Abertura em poucos cliques</h4>
+                    <ul><li>Conversão direta em OS</li><li>Sem retrabalho entre áreas</li></ul>
+                    </div>
+                </div>
+            </article>
+<article class="fn-linha" id="fn-agenda">
+<div class="fn-texto fx-texto revelar-esquerda">
+                            <span class="fx-eyebrow"><i></i>Funcionalidade 03</span>
+                            <div class="fn-titulo"><h3>Agenda de manutenção</h3></div>
+                            <div class="fx-traco"></div>
+                            <p>Online e de fácil acesso para logística e operação darem retorno em tempo real, com PDFs da agenda e relatórios de serviço de extração rápida.</p>
+                            <div class="fx-destaque"><span class="fx-ico fx-ico--sm"><img src="Icones/icones-escuros/agenda.png" alt=""></span><div><strong>Operação e logística alinhadas</strong><span>Uma só agenda, atualizada em tempo real.</span></div></div>
+                        </div>
+<div class="fn-visual revelar-direita">
+<div class="fn-fundo"></div>
+<!-- QUADRO DA IMAGEM: coloque o arquivo (png, jpg ou webp) em Imagens/funcionalidades/agenda.png -->
+<div class="fn-painel fn-atras fn-painel-img">
+<img class="fn-foto" src="Imagens/funcionalidades/agenda.png" alt="Tela de Agenda de manutenção da plataforma" onerror="var e=['jpg','jpeg','webp'],i=+(this.dataset.i||0);if(i<e.length){this.dataset.i=i+1;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else{this.remove()}">
+</div>
+<!-- QUADRO DO TEXTO: edite o conteúdo abaixo -->
+<div class="fn-painel fn-frente fn-painel-txt">
+<h4>Acesso online, em tempo real</h4>
+<ul><li>PDFs da agenda em um clique</li><li>Relatórios de serviço rápidos</li></ul>
+</div>
+</div>
+</article>
+<article class="fn-linha" id="fn-historico">
+<div class="fn-texto fx-texto revelar-direita">
+                            <span class="fx-eyebrow"><i></i>Funcionalidade 04</span>
+                            <div class="fn-titulo"><h3>Histórico de manutenção</h3></div>
+                            <div class="fx-traco"></div>
+                            <p>Consulte facilmente todo o histórico de manutenções realizadas, de cada ativo, em um só lugar.</p>
+                            <div class="fx-destaque"><span class="fx-ico fx-ico--sm"><img src="Icones/icones-escuros/lista.png" alt=""></span><div><strong>Tudo registrado, tudo à mão</strong><span>Encontre qualquer manutenção em segundos.</span></div></div>
+                        </div>
+<div class="fn-visual revelar-esquerda">
+<div class="fn-fundo"></div>
+<!-- QUADRO DA IMAGEM: coloque o arquivo (png, jpg ou webp) em Imagens/funcionalidades/historico.png -->
+<div class="fn-painel fn-atras fn-painel-img">
+<img class="fn-foto" src="Imagens/funcionalidades/historico.png" alt="Tela de Histórico de manutenção da plataforma" onerror="var e=['jpg','jpeg','webp'],i=+(this.dataset.i||0);if(i<e.length){this.dataset.i=i+1;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else{this.remove()}">
+</div>
+<!-- QUADRO DO TEXTO: edite o conteúdo abaixo -->
+<div class="fn-painel fn-frente fn-painel-txt">
+<h4>Histórico de cada ativo</h4>
+<ul><li>Tudo em um só lugar</li><li>Consulta fácil e rápida</li></ul>
+</div>
+</div>
+</article>
+<article class="fn-linha" id="fn-indicadores">
+<div class="fn-texto fx-texto revelar-esquerda">
+                            <span class="fx-eyebrow"><i></i>Funcionalidade 05</span>
+                            <div class="fn-titulo"><h3>Indicadores</h3></div>
+                            <div class="fx-traco"></div>
+                            <p>Acompanhe os principais indicadores e tome decisões baseadas em dados.</p>
+                            <div class="fx-destaque"><span class="fx-ico fx-ico--sm"><img src="Icones/icones-escuros/grafico-de-barras.png" alt=""></span><div><strong>Decisões baseadas em dados</strong><span>Indicadores claros para a gestão acompanhar.</span></div></div>
+                        </div>
+<div class="fn-visual revelar-direita">
+<div class="fn-fundo"></div>
+<!-- QUADRO DA IMAGEM: coloque o arquivo (png, jpg ou webp) em Imagens/funcionalidades/indicadores.png -->
+<div class="fn-painel fn-atras fn-painel-img">
+<img class="fn-foto" src="Imagens/funcionalidades/indicadores.png" alt="Tela de Indicadores da plataforma" onerror="var e=['jpg','jpeg','webp'],i=+(this.dataset.i||0);if(i<e.length){this.dataset.i=i+1;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else{this.remove()}">
+</div>
+<!-- QUADRO DO TEXTO: edite o conteúdo abaixo -->
+<div class="fn-painel fn-frente fn-painel-txt">
+<h4>Principais indicadores</h4>
+<ul><li>Visão clara para a gestão</li><li>Decisões baseadas em dados</li></ul>
+</div>
+</div>
+</article>
+<article class="fn-linha" id="fn-logistica">
+<div class="fn-texto fx-texto revelar-direita">
+                            <span class="fx-eyebrow"><i></i>Funcionalidade 06</span>
+                            <div class="fn-titulo"><h3>Integração Logística</h3></div>
+                            <div class="fx-traco"></div>
+                            <p>Comunicação instantânea entre operação, logística e PCM, reduzindo conflitos e atrasos.</p>
+                            <div class="fx-destaque"><span class="fx-ico fx-ico--sm"><img src="Icones/icones-claros/entrega-rapida.png" alt=""></span><div><strong>Todos no mesmo fluxo</strong><span>Operação, logística e PCM conectados.</span></div></div>
+                        </div>
+<div class="fn-visual revelar-esquerda">
+<div class="fn-fundo"></div>
+<!-- QUADRO DA IMAGEM: coloque o arquivo (png, jpg ou webp) em Imagens/funcionalidades/logistica.png -->
+<div class="fn-painel fn-atras fn-painel-img">
+<img class="fn-foto" src="Imagens/funcionalidades/logistica.png" alt="Tela de Integração Logística da plataforma" onerror="var e=['jpg','jpeg','webp'],i=+(this.dataset.i||0);if(i<e.length){this.dataset.i=i+1;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else{this.remove()}">
+</div>
+<!-- QUADRO DO TEXTO: edite o conteúdo abaixo -->
+<div class="fn-painel fn-frente fn-painel-txt">
+<h4>Comunicação instantânea</h4>
+<ul><li>Operação, logística e PCM</li><li>Menos conflitos e atrasos</li></ul>
+</div>
+</div>
+</article>
+<article class="fn-linha" id="fn-ia">
+<div class="fn-texto fx-texto revelar-esquerda">
+                            <span class="fx-eyebrow"><i></i>Funcionalidade 07</span>
+                            <div class="fn-titulo"><h3>Chat Box com IA</h3><span class="badge badge-escuro">DIFERENCIAL</span></div>
+                            <div class="fx-traco"></div>
+                            <p>Converse com o Mr.Harley para obter diagnósticos, buscar registros e abrir ordens de serviço.</p>
+                            <div class="fx-destaque"><span class="fx-ico fx-ico--sm"><img src="Icones/icones-claros/robo.png" alt=""></span><div><strong>Respostas ágeis, decisões inteligentes</strong><span>Suporte contínuo para manter a operação em movimento.</span></div></div>
+                        </div>
+<div class="fn-visual revelar-direita">
+<div class="fn-fundo"></div>
+<!-- QUADRO DA IMAGEM: coloque o arquivo (png, jpg ou webp) em Imagens/funcionalidades/ia.png -->
+<div class="fn-painel fn-atras fn-painel-img">
+<img class="fn-foto" src="Imagens/funcionalidades/ia.png" alt="Tela de Chat Box com IA da plataforma" onerror="var e=['jpg','jpeg','webp'],i=+(this.dataset.i||0);if(i<e.length){this.dataset.i=i+1;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else{this.remove()}">
+</div>
+<!-- QUADRO DO TEXTO: edite o conteúdo abaixo -->
+<div class="fn-painel fn-frente fn-painel-txt">
+<h4>Diagnósticos com o Mr.Harley</h4>
+<ul><li>Busca de registros</li><li>Abertura de OS pelo chat</li></ul>
+</div>
+</div>
+</article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO MR.HARLEY-->
+        <section id="mr.harley" class="ia-mrharley">
+            <div class="wave-divider">
+                    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                        <!-- Camada de sombra/contraste intermediária -->
+                        <path class="onda-sombra" fill="rgba(200, 141, 67, 0.2)" d="M0,192L60,181.3C120,171,240,149,360,165.3C480,181,600,235,720,229.3C840,224,960,160,1080,138.7C1200,117,1320,139,1380,150.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+                        
+                        <!-- Camada principal: usa a cor da seção de cima (acompanha o tema via CSS) -->
+                        <path class="onda-principal" fill="#ffffff" d="M0,224L60,208C120,192,240,160,360,165.3C480,171,600,213,720,202.7C840,192,960,128,1080,117.3C1200,107,1320,149,1380,170.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+                    </svg>
+            </div>
+
+            <div class="mrharley-container">
+                <div class="mrharley-main-grid">
+                    
+                    <div class="mrharley-info revelar-esquerda">
+                        <span class="mrharley-badge">
+                             CONHEÇA O MR.HARLEY
+                        </span>
+                        
+                        <h2 class="mrharley-title">
+                            Inteligência em<br>
+                            <span class="highlight-title">Tempo Real.</span>
+                        </h2>
+                        
+                        <p class="mrharley-description">
+                            O novo assistente por trás da sua produtividade.<br>
+                            Respostas ágeis, decisões inteligentes e suporte contínuo<br>
+                            para manter sua operação sempre em movimento.
+                        </p>
+
+                        <div class="mrharley-features-grid revelar-cascata">
+                            <div class="feature-card">
+                                <div class="feature-icon"><img src="Icones/icones-claros/cerebro.png"></div>
+                                <div class="feature-text">
+                                    <h3>Sugestão de Diagnóstico</h3>
+                                    <p>Análises precisas com base no histórico completo de manutenção.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-card">
+                                <div class="feature-icon"><img src="Icones/icones-claros/globo.png"></div>
+                                <div class="feature-text">
+                                    <h3>Pesquisas Externas</h3>
+                                    <p>Busca rápida e integração com fontes externas de dados.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-card">
+                                <div class="feature-icon"><img src="Icones/icones-claros/ferramentas.png"></div>
+                                <div class="feature-text">
+                                    <h3>Suporte Técnico</h3>
+                                    <p>Instruções claras e orientações estruturadas passo a passo.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-card">
+                                <div class="feature-icon"><img src="Icones/icones-claros/lupa.png"></div>
+                                <div class="feature-text">
+                                    <h3>Busca Inteligente</h3>
+                                    <p>Localização imediata de registros em todo o histórico de manutenção.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-card">
+                                <div class="feature-icon"><img src="Icones/icones-claros/relogio.png"></div>
+                                <div class="feature-text">
+                                    <h3>Sinalizador de Atraso</h3>
+                                    <p>Alertas automáticos para identificar pendências na operação.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-card">
+                                <div class="feature-icon"><img src="Icones/icones-claros/lista_creme.png"></div>
+                                <div class="feature-text">
+                                    <h3>Abertura de OS</h3>
+                                    <p>Suporte ágil na criação e direcionamento de Ordens de Serviço.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mrharley-visual revelar-direita">
+                        <div class="image-wrapper-back">
+                            <div class="image-placeholder"><img src="Imagens/mr.Harley - fundomarrom.png"></div>
+                        </div>
+                        <div class="image-wrapper-front">
+                            <div class="image-placeholder"><img src="Imagens/chat com mr.harley.png"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--SEÇÃO TRANSIÇÃO PARA O FINAL-->
+        <section id="" class="secao-integrado">
+        <div class="secao-integrado__conteudo">
+            
+            <!-- Lado Esquerdo: Texto e Ação -->
+            <div class="secao-integrado__lado-esquerdo revelar-esquerda">
+            <div class="secao-integrado__subtitulo">
+                <span class="secao-integrado__icone-tag"></span>
+                <span class="secao-integrado__texto-tag">TUDO INTEGRADO</span>
+            </div>
+            
+            <h2 class="secao-integrado__titulo">
+                Tudo conectado.<br>
+                Tudo sob controle.
+            </h2>
+            
+            <p class="secao-integrado__descricao">
+                Uma gestão eficiente não depende de ferramentas isoladas. A Updated Yesterday conecta informações, pessoas e processos para transformar dados do dia a dia em decisões mais rápidas e inteligentes.
+            </p>
+            
+            <a href="https://updatedyesterday.streamlit.app/" class="secao-integrado__botao">
+                Saiba mais sobre a UY &rarr;
+            </a>
+            </div>
+
+            <!-- Centro: Espaço para a Imagem do Dashboard -->
+            <div class="secao-integrado__centro">
+            <!-- Substitua o atributo src pela sua imagem de mock/dashboard -->
+            <img src="Imagens/Tela1uy.png" alt="Dashboard da plataforma" class="secao-integrado__imagem-dashboard">
+            </div>
+
+            <!-- Lado Direito: Passos / Funcionalidades -->
+            <div class="secao-integrado__lado-direito revelar-direita revelar-cascata">
+            <!-- Linha vertical contínua conectando os círculos -->
+            <div class="secao-integrado__linha-conexao"></div>
+
+            <div class="secao-integrado__passo">
+                <div class="secao-integrado__container-icone">
+                <div class="secao-integrado__linha-horizontal"></div>
+                <div class="secao-integrado__icone">
+                    <img src="Icones/icones-claros/arquivos.png">
+                </div>
+                </div>
+                <div class="secao-integrado__texto-passo">
+                <h3 class="secao-integrado__titulo-passo"><span>01 &mdash;</span> Chamados</h3>
+                <p class="secao-integrado__descricao-passo"></p>
+                </div>
+            </div>
+
+            <div class="secao-integrado__passo">
+                <div class="secao-integrado__container-icone">
+                <div class="secao-integrado__linha-horizontal"></div>
+                <div class="secao-integrado__icone">
+                    <img src="Icones/icones-claros/duaspessoas-creme.png">
+                </div>
+                </div>
+                <div class="secao-integrado__texto-passo">
+                <h3 class="secao-integrado__titulo-passo"><span>02 &mdash;</span> Janelas de Disponibilidade</h3>
+                <p class="secao-integrado__descricao-passo"></p>
+                </div>
+            </div>
+
+            <div class="secao-integrado__passo">
+                <div class="secao-integrado__container-icone">
+                <div class="secao-integrado__linha-horizontal"></div>
+                <div class="secao-integrado__icone">
+                    <img src="Icones/icones-claros/graficodebarras_creme.png">
+                </div>
+                </div>
+                <div class="secao-integrado__texto-passo">
+                <h3 class="secao-integrado__titulo-passo"><span>03 &mdash;</span> Agenda</h3>
+                <p class="secao-integrado__descricao-passo"></p>
+                </div>
+            </div>
+
+            <div class="secao-integrado__passo">
+                <div class="secao-integrado__container-icone">
+                <div class="secao-integrado__linha-horizontal"></div>
+                <div class="secao-integrado__icone">
+                    <img src="Icones/icones-claros/grafico-creme.png">
+                </div>
+                </div>
+                <div class="secao-integrado__texto-passo">
+                <h3 class="secao-integrado__titulo-passo"><span>04 &mdash;</span> Ordens de Serviço</h3>
+                <p class="secao-integrado__descricao-passo"></p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+        <!--SEÇÃO MOTIVO PARA NOS ESCOLHER-->
+        <section id="escolher" class="motivoparanosescolher">
+        <div class="header-secao revelar-cima">
+            <span class="subtitulo-tag">POR QUE ESCOLHER A UPDATED YESTERDAY?</span>
+            <h2 class="titulo-secao">Motivos para escolher a <span>Updated Yesterday</span></h2>
+        </div>
+
+        <div class="grid-motivos revelar-cascata">
+            <!-- Card 1 -->
+            <article class="card-motivo">
+            <div class="icone-placeholder" aria-label="Ícone Mais Eficiência">
+                <img src="Icones/icones-escuros/foguete.png" alt="Mais Eficiência">
+            </div>
+            <h3>Mais Eficiência</h3>
+            <span class="linha-detalhe"></span>
+            <p>Automatize processos e reduza o tempo gasto com tarefas manuais.</p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card-motivo">
+            <div class="icone-placeholder" aria-label="Ícone Menos Custos">
+                  <img src="Icones/icones-escuros/dolar.png" alt="foguete">
+            </div>
+            <h3>Menos Custos</h3>
+            <span class="linha-detalhe"></span>
+            <p>Previna falhas, otimize recursos e diminua custos operacionais.</p>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card-motivo">
+            <div class="icone-placeholder" aria-label="Ícone Decisões Inteligentes">
+                    <img src="Icones/icones-escuros/grafico.png" alt="grafico positivo">
+            </div>
+            <h3>Decisões Inteligentes</h3>
+            <span class="linha-detalhe"></span>
+            <p>Dados centralizados e análises precisas para escolhas estratégicas.</p>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card-motivo">
+            <div class="icone-placeholder" aria-label="Ícone Foco no que Importa">
+                    <img src="Icones/icones-escuros/duaspessoass.png" alt="duas pessoas">
+            </div>
+            <h3>Foco no que Importa</h3>
+            <span class="linha-detalhe"></span>
+            <p>Sua equipe focada no essencial, enquanto o sistema cuida do resto.</p>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="card-motivo">
+            <div class="icone-placeholder" aria-label="Ícone Suporte que Resolve">
+                  <img src="Icones/icones-escuros/bolha-de-bate-papo.png" alt="bolha de chat">
+            </div>
+            <h3>Suporte que Resolve</h3>
+            <span class="linha-detalhe"></span>
+            <p>Atendimento próximo, ágil e humano sempre que você precisar.</p>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="card-motivo">
+            <div class="icone-placeholder" aria-label="Ícone Segurança Total">
+                  <img src="Icones/icones-escuros/escudo.png" alt="escudo">
+            </div>
+            <h3>Segurança Total</h3>
+            <span class="linha-detalhe"></span>
+            <p>Seus dados protegidos com tecnologia de ponta e total confiabilidade.</p>
+            </article>
+        </div>
+
+        <!-- Banner Inferior -->
+        <div class="banner-destaque">
+            <div class="icone-placeholder destaque-icone" aria-label="Ícone Destaque">
+                  <img src="Icones/icones-escuros/estrela.png" alt="estrela">
+            </div>
+            <div class="banner-conteudo">
+            <h4>Sua operação merece o melhor.</h4>
+            <p><strong> Updated Yesterday entrega o controle que sua empresa precisa para crescer.</strong> </p>
+            </div>
+        </div>
+        </section> 
+        
+        <!--SEÇÃO SOLICITAÇÃO-->
+        <section id="solicitar teste" class="solicitacao-section revelar">
+        <div class="solicitacao-container">
+            <span class="solicitacao-kicker">PRONTO PARA TRANSFORMAR SUA GESTÃO?</span>
+            <h2 class="solicitacao-titulo">Sua manutenção pode ir muito além. Vamos juntos?</h2>
+            <div class="solicitacao-linha"></div>
+            <p class="solicitacao-descricao">
+            Experimente a Updated Yesterday na prática e descubra como é simples ganhar controle, eficiência e resultados reais.
+            </p>
+            <div class="solicitacao-acoes">
+            <a href="solicitar-orçamento.html" class="btn btn-principal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                Solicitar teste grátis
+            </a>
+            <a href="#" class="btn btn-secundario">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Falar com equipe de vendas
+            </a>
+            </div>
+        </div>
+        </section>
+    </main>
+
+        <!--RODAPÉ-->
+        <footer class="footer" id="rodape">
+            <div class="footer-container">
+            
+            <!-- GRID SUPERIOR (5 COLUNAS) -->
+            <div class="footer-top revelar-cascata">
+                
+                <!-- COLUNA 1: LOGO E DESCRIÇÃO -->
+                <div class="footer-col col-brand">
+                <div class="brand-header">
+                    <!-- Espaço reservado para a LOGO ao lado do texto -->
+                    <div class="logo-placeholder">
+                    <img src="Imagens/logotipo.png" alt="Logo Updated Yesterday">
+                    </div>
+                    <div class="brand-title">
+                    <h2>UPDATED YESTERDAY</h2>
+                            <p class="subtitle">Nós não dependemos de sorte.</p>
+                    </div>
+                </div>
+
+                <p class="brand-description">
+                    Soluções inteligentes para gestão de manutenção e operações.<br>
+                    Tecnologia, eficiência e conexão para o seu negócio.
+                </p>
+
+                <div class="social-section">
+                    <h4 class="section-title">REDES SOCIAIS</h4>
+                    <div class="social-links">
+                    <!-- Espaço para ícones/imagens das redes sociais -->
+                    <a href="https://www.instagram.com/p/DcltIoWEeUV/?igsi=NTBnZ2xrN2NycWJ2" title="Instagram"><img src="Icones/icones-claros/instagram.png" class="sociais-img"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/updated-yesterday/posts/?viewAsMember=true" title="LinkedIn"><img src="Icones/icones-claros/linkedin.png" class="sociais-img"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/share/1K7FVFRbi6/" title="Facebook"><img src="Icones/icones-claros/facebook.png" class="sociais-img"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/message/VCNQYGT4VERDC1" title="WhatsApp"><img src="Icones/icones-claros/whatsapp.png" class="sociais-img"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- COLUNA 2: NAVEGAÇÃO -->
+                <div class="footer-col">
+                <h4 class="section-title">NAVEGAÇÃO</h4>
+                <ul class="footer-list">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#objetivo">Nosso objetivo</a></li>
+                    <li><a href="#funcionalidades">Funcionalidades</a></li>
+                    <li><a href="#mr.harley">MR.harley</a></li>
+                    <li><a href="#escolher">Motivos para escolher</a></li>
+                    <li><a href="#rodape">Contato</a></li>
+                </ul>
+                </div>
+
+                <!-- COLUNA 3: FUNCIONALIDADES -->
+                <div class="footer-col">
+                <h4 class="section-title">FUNCIONALIDADES</h4>
+                <ul class="footer-list">
+                    <li><a href="#fn-preventiva">Preventiva</a></li>
+                    <li><a href="#fn-chamados">Chamados</a></li>
+                    <li><a href="#fn-agenda">Agenda de manutenção</a></li>
+                    <li><a href="#fn-ia">Chat Box com IA</a></li>
+                    <li><a href="#fn-historico">Histórico de manutenção</a></li>
+                    <li><a href="#fn-indicadores">Indicadores</a></li>
+                    <li><a href="#fn-logistica">Integração de logística</a></li>
+                </ul>
+                </div>
+
+                <!-- COLUNA 4: CONTATO -->
+                <div class="footer-col">
+                <h4 class="section-title">CONTATO</h4>
+                <ul class="contact-list">
+                    <li>
+                    <span class="contact-icon"><i class="fa-regular fa-envelope"></i></span>
+                    <a href="mailto:updatedyesterday26@gmail.com">updatedyesterday26@gmail.com</a>
+                    </li>
+                    <li>
+                    <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                    <span>(51) 993928030 </span>
+                    </li>
+                  
+
+                </ul>
+                </div>
+
+                <!-- COLUNA 5: INFORMAÇÕES -->
+                <div class="footer-col">
+                <h4 class="section-title">INFORMAÇÕES</h4>
+                <ul class="footer-list">
+                    <li><a href="creditos.html">Créditos</a></li>
+                    <li><a href="politica-de-provacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                </ul>
+                </div>
+
+            </div>
+
+<!-- SEÇÃO NEWSLETTER -->
+<div class="sib-form" style="text-align: left; width: 100%;">
+  <div id="sib-form-container" class="sib-form-container" style="background: transparent; padding: 0;">
+    
+    <!-- Mensagem de erro customizada (oculta por padrão) -->
+    <div id="error-message" class="sib-form-message-panel" style="display: none; font-family: inherit; font-size: 14px; text-align: left; color: #d4a359; background-color: rgba(0, 0, 0, 0.4); border: 1px solid rgba(212, 163, 89, 0.5); border-radius: 8px; max-width: 100%; margin-bottom: 12px; padding: 12px 16px;">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center" style="display: flex; align-items: center; gap: 8px; color: #d4a359;">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon" style="fill: #d4a359; width: 18px; height: 18px; flex-shrink: 0;">
+          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text" style="color: #d4a359;">
+          Sua assinatura não pôde ser enviada. Tente novamente.
+        </span>
+      </div>
+    </div>
+    
+    <!-- Mensagem de sucesso (oculta por padrão) -->
+    <div id="success-message" class="sib-form-message-panel" style="display: none; font-family: inherit; font-size: 14px; text-align: left; color: #13ce66; background-color: rgba(0, 0, 0, 0.4); border: 1px solid #13ce66; border-radius: 8px; max-width: 100%; margin-bottom: 12px; padding: 12px 16px;">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center" style="display: flex; align-items: center; gap: 8px;">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon" style="fill: #13ce66; width: 18px; height: 18px; flex-shrink: 0;">
+          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">
+          Você fez sua assinatura com sucesso.
+        </span>
+      </div>
+    </div>
+
+    <!-- Card Principal -->
+    <div id="sib-container" class="nl-card sib-container--large sib-container--vertical">
+      <form id="sib-form" class="nl-form" method="POST" action="https://formspree.io/f/xgaoywdn">
+
+        <!-- Ícone + Textos -->
+        <div class="nl-info">
+          <div class="nl-icone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4a359" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div class="nl-textos">
+            <p class="nl-titulo">Newsletter</p>
+            <p class="nl-subtitulo">Assine nossa newsletter e mantenha-se atualizado.</p>
+          </div>
+        </div>
+
+        <!-- Campo de e-mail + botão -->
+        <div class="nl-campo-grupo">
+          <div class="nl-campo">
+            <label for="EMAIL" class="nl-sr-only">Seu e-mail</label>
+            <input class="nl-input" type="email" id="EMAIL" name="email" autocomplete="email" placeholder="Seu melhor e-mail" required />
+            <button class="nl-botao" type="submit">
+              ASSINAR <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Texto de segurança -->
+        <p class="nl-nota">Seus dados estão protegidos com segurança e privacidade.</p>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- DIVISOR COM DETALHE FLOREADO DA IMAGEM -->
+<div class="footer-divider">
+    <span class="divider-ornament">❖</span>
+</div>
+
+<!-- RODAPÉ INFERIOR (COPYRIGHT E CRÉDITOS) -->
+<div class="footer-bottom">
+    <p class="copyright">
+    © 2026 Updated yesterday.<br>
+    Todos os direitos reservados.
+    </p>
+    <div class="footer-tagline">
+    <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+    <p>Feito com propósito para manter tudo funcionando.</p>
+    </div>
+</div>
+
+<script>
+  (function () {
+    var form = document.getElementById('sib-form');
+    var successMsg = document.getElementById('success-message');
+    var errorMsg = document.getElementById('error-message');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (successMsg) successMsg.style.display = 'none';
+      if (errorMsg) errorMsg.style.display = 'none';
+
+      var dados = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: dados,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(function (resposta) {
+        if (resposta.ok) {
+          if (successMsg) successMsg.style.display = 'block';
+          form.reset();
+        } else {
+          if (errorMsg) errorMsg.style.display = 'block';
+        }
+      }).catch(function (erro) {
+        if (errorMsg) errorMsg.style.display = 'block';
+      });
+    });
+  })();
+</script>
+
+<script>
+// menu.js — Menu hambúrguer + navegação ativa (Updated Yesterday)
+// Usado em todas as páginas do site para manter o comportamento consistente.
+//
+// OBS: este arquivo precisa se chamar exatamente "menu.js", pois é esse o
+// nome que todas as páginas (.html) carregam via <script src="menu.js">.
+(function () {
+
+    // ------------------------------------------------------------------
+    // MENU HAMBÚRGUER (telas menores)
+    // ------------------------------------------------------------------
+    const btn = document.getElementById('btn-hamburguer');
+    const menu = document.getElementById('menu-mobile');
+    const overlay = document.getElementById('overlay-menu-mobile');
+
+    if (btn && menu && overlay) {
+        function abrirMenu() {
+            menu.classList.add('aberto');
+            overlay.classList.add('aberto');
+            btn.classList.add('ativo');
+            btn.setAttribute('aria-expanded', 'true');
+            menu.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('menu-bloqueado');
+        }
+
+        function fecharMenu() {
+            menu.classList.remove('aberto');
+            overlay.classList.remove('aberto');
+            btn.classList.remove('ativo');
+            btn.setAttribute('aria-expanded', 'false');
+            menu.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('menu-bloqueado');
+        }
+
+        btn.addEventListener('click', function () {
+            if (menu.classList.contains('aberto')) {
+                fecharMenu();
+            } else {
+                abrirMenu();
+            }
+        });
+
+        overlay.addEventListener('click', fecharMenu);
+
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', fecharMenu);
+        });
+
+        document.addEventListener('keydown', function (evento) {
+            if (evento.key === 'Escape') fecharMenu();
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 992) fecharMenu();
+        });
+    }
+
+    // ------------------------------------------------------------------
+    // LINK DE NAVEGAÇÃO "ATIVO" (cabeçalho — apenas telas maiores)
+    // Ao clicar em uma opção do menu (Sobre Nós, Objetivo, Funcionalidades,
+    // Contato), o link fica marcado — a underline dourada "trava" — indicando
+    // qual seção foi acessada, além de rolar até ela normalmente.
+    // ------------------------------------------------------------------
+    var linksMenu = document.querySelectorAll('.link-menu');
+
+    function marcarAtivo(linkClicado) {
+        linksMenu.forEach(function (link) {
+            link.classList.remove('ativo');
+        });
+        linkClicado.classList.add('ativo');
+    }
+
+    linksMenu.forEach(function (link) {
+        link.addEventListener('click', function () {
+            marcarAtivo(link);
+        });
+    });
+
+    // Ao abrir a página já com uma âncora na URL (ex.: index.html#objetivo,
+    // ou vindo de outra página como creditos.html → index.html#...),
+    // marca o link correspondente como ativo assim que a página carrega.
+    if (window.location.hash) {
+        linksMenu.forEach(function (link) {
+            var partesHref = link.getAttribute('href').split('#');
+            var hashDoLink = partesHref[1] ? ('#' + partesHref[1]) : '';
+            if (hashDoLink && hashDoLink === window.location.hash) {
+                marcarAtivo(link);
+            }
+        });
+    }
+})();
+</script>
+<script>
+// tema — alternância entre modo escuro (padrão) e claro (Updated Yesterday)
+// O tema escuro é o padrão no primeiro acesso. A escolha fica salva no navegador (chave "uy-tema") e é aplicada em todas as
+// páginas pelo pequeno script no <head>, então o tema continua ao navegar.
+(function () {
+    var raiz = document.documentElement;
+    var botao = document.getElementById('btn-tema');
+    if (!botao) return;
+
+    function aplicar(escuro) {
+        raiz.classList.toggle('tema-escuro', escuro);
+        botao.setAttribute('aria-pressed', escuro ? 'true' : 'false');
+        botao.setAttribute('aria-label', escuro ? 'Ativar modo claro' : 'Ativar modo escuro');
+    }
+
+    function lerSalvo() {
+        try { return localStorage.getItem('uy-tema') !== 'claro'; } catch (e) { return raiz.classList.contains('tema-escuro'); }
+    }
+
+    aplicar(lerSalvo());
+
+    botao.addEventListener('click', function () {
+        var escuro = !raiz.classList.contains('tema-escuro');
+        aplicar(escuro);
+        try { localStorage.setItem('uy-tema', escuro ? 'escuro' : 'claro'); } catch (e) {}
+    });
+
+    // Mantém o tema sincronizado ao voltar para a página (botão "voltar") ou entre abas.
+    window.addEventListener('pageshow', function () { aplicar(lerSalvo()); });
+    window.addEventListener('storage', function (e) { if (e.key === 'uy-tema') aplicar(lerSalvo()); });
+})();
+</script>
+<script src="scroll-reveal.js"></script>
+<a class="wa-flutuante" href="https://wa.me/message/VCNQYGT4VERDC1" target="_blank" rel="noopener" aria-label="Entrar em contato pelo WhatsApp">
+    <span class="wa-dica">Entrar em contato</span>
+    <img src="Icones/icones-claros/whatsapp.png" alt="">
+</a>
+</body>
+</html>
